@@ -42,7 +42,7 @@ require (
 	github.com/ltcsuite/lnd/kvdb v1.3.1
 	github.com/ltcsuite/lnd/queue v1.1.0
 	github.com/ltcsuite/lnd/ticker v1.1.0
-	github.com/ltcsuite/ltcd v0.22.1-beta.0.20220621115417-d6898fbac500
+	github.com/ltcsuite/ltcd v0.22.1-beta
 	github.com/ltcsuite/ltcd/btcec/v2 v2.1.0
 	github.com/ltcsuite/ltcd/ltcutil v1.1.0
 	github.com/ltcsuite/ltcd/ltcutil/psbt v1.1.0-1
@@ -75,6 +75,7 @@ require (
 	gopkg.in/macaroon-bakery.v2 v2.0.1
 	gopkg.in/macaroon.v2 v2.0.0
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
+	
 )
 
 replace github.com/ltcsuite/lnd/cert => ./cert
@@ -88,6 +89,12 @@ replace github.com/ltcsuite/lnd/kvdb => ./kvdb
 replace github.com/ltcsuite/lnd/queue => ./queue
 
 replace github.com/ltcsuite/lnd/ticker => ./ticker
+
+replace 	github.com/ltcsuite/ltcd  => ./ltcd
+replace 	github.com/ltcsuite/ltcd/btcec/v2  => ./ltcd/btcec
+replace 	github.com/ltcsuite/ltcd/ltcutil  =>  ./ltcd/ltcutil
+replace 	github.com/ltcsuite/ltcd/ltcutil/psbt  => ./ltcd/ltcutil/psbt
+
 
 // This replace is for addressing the CVE https://github.com/advisories/GHSA-f6mq-5m25-4r72
 // This is a indirect dependency that cannot be upgraded directly.
